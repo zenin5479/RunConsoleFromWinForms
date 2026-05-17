@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using SharedLibrary;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -28,12 +29,12 @@ namespace WinFormsApp
          try
          {
             // Собираем запрос
-            var numbers = txtNumbers.Text
+            List<double> numbers = txtNumbers.Text
                .Split(new[] { ' ', ',', ';' }, StringSplitOptions.RemoveEmptyEntries)
                .Select(s => double.Parse(s.Trim()))
                .ToList();
 
-            var request = new CalculationRequest
+            CalculationRequest request = new CalculationRequest
             {
                Operation = txtOperation.Text.Trim(),
                Numbers = numbers,
@@ -48,7 +49,8 @@ namespace WinFormsApp
 
             // Отправляем в консоль
             _consoleInput.WriteLine(jsonRequest);
-            _consoleInput.Flush(); // обязательно отправляем данные
+            // Обязательно отправляем данные
+            _consoleInput.Flush();
 
             // Читаем ответ (строка JSON)
             //string jsonResponse = consoleOutput.ReadLine();
@@ -66,7 +68,7 @@ namespace WinFormsApp
                return;
             }
 
-            var response = JsonConvert.DeserializeObject<CalculationResponse>(jsonResponse);
+            CalculationResponse response = JsonConvert.DeserializeObject<CalculationResponse>(jsonResponse);
 
             if (response.Success)
             {
@@ -85,7 +87,7 @@ namespace WinFormsApp
 
       private void StartConsoleApp()
       {
-         var startInfo = new ProcessStartInfo
+         ProcessStartInfo startInfo = new ProcessStartInfo
          {
             FileName = "CalculationConsole.exe",
             UseShellExecute = false,
@@ -129,15 +131,21 @@ namespace WinFormsApp
          // Закрываем stdin консоли – это сигнал для неё завершиться
          if (_consoleInput != null)
          {
-            _consoleInput.Close(); // закрывает поток и даёт консоли прочитать null
+            // Закрывает поток и даёт консоли прочитать null
+            _consoleInput.Close();
          }
 
          // Ждём завершения консольного процесса (необязательно, но корректно)
          if (_consoleProcess != null && !_consoleProcess.HasExited)
          {
-            _consoleProcess.WaitForExit(3000); // максимум 3 секунды
+            // Максимум 3 секунды
+            _consoleProcess.WaitForExit(3000);
             if (!_consoleProcess.HasExited)
-               _consoleProcess.Kill(); // на всякий случай
+            {
+               // На всякий случай
+               _consoleProcess.Kill();
+            }
+
             _consoleProcess.Close();
          }
       }
