@@ -73,11 +73,11 @@
          // 
          // btnCalculate
          // 
-         btnCalculate.Location = new System.Drawing.Point(67, 131);
+         btnCalculate.Location = new System.Drawing.Point(12, 70);
          btnCalculate.Name = "btnCalculate";
-         btnCalculate.Size = new System.Drawing.Size(75, 23);
+         btnCalculate.Size = new System.Drawing.Size(100, 23);
          btnCalculate.TabIndex = 4;
-         btnCalculate.Text = "button1";
+         btnCalculate.Text = "Вычислить";
          btnCalculate.UseVisualStyleBackColor = true;
          // 
          // Form1
