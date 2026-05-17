@@ -79,13 +79,25 @@ namespace WinFormsApp
       {
          var startInfo = new ProcessStartInfo
          {
+
+
+
+
+
+
+
             FileName = "CalculationConsole.exe",
             UseShellExecute = false,
             RedirectStandardInput = true,
             RedirectStandardOutput = true,
             RedirectStandardError = false,
-            CreateNoWindow = false,            // показывать окно консоли
-            //WindowStyle = ProcessWindowStyle.Normal // можно не указывать
+            // Показывать окно консоли
+            CreateNoWindow = false,
+            // Можно не указывать
+            WindowStyle = ProcessWindowStyle.Normal,
+            // Устанавливаем UTF-8 для обоих потоков
+            StandardOutputEncoding = System.Text.Encoding.UTF8,
+            StandardErrorEncoding = System.Text.Encoding.UTF8
          };
 
          consoleProcess = new Process { StartInfo = startInfo };
