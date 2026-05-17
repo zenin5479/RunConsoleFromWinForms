@@ -25,7 +25,7 @@ namespace CalculationConsole
 
       static void ProcessLine(string json)
       {
-         var response = new CalculationResponse();
+         CalculationResponse response = new CalculationResponse();
          try
          {
             CalculationRequest request = JsonConvert.DeserializeObject<CalculationRequest>(json);
