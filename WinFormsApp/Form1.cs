@@ -98,6 +98,7 @@ namespace WinFormsApp
             // Можно не указывать
             WindowStyle = ProcessWindowStyle.Normal,
             // Устанавливаем UTF-8 для обоих потоков
+            //StandardInputEncoding = System.Text.Encoding.UTF8,
             StandardOutputEncoding = System.Text.Encoding.UTF8,
             // Можно вообще убрать StandardErrorEncoding
             StandardErrorEncoding = System.Text.Encoding.UTF8
@@ -106,7 +107,12 @@ namespace WinFormsApp
          consoleProcess = new Process { StartInfo = startInfo };
          consoleProcess.Start();
 
-         consoleInput = consoleProcess.StandardInput;
+         // Создаём StreamWriter БЕЗ BOM не потребуется вызывать Flush() после каждой записи
+         consoleInput = new StreamWriter(consoleProcess.StandardInput.BaseStream, new System.Text.UTF8Encoding(false))
+         {
+            AutoFlush = true
+         };
+
          consoleOutput = consoleProcess.StandardOutput;
          // Добавили поле в класс
          consoleError = consoleProcess.StandardError;
