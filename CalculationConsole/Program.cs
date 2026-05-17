@@ -8,7 +8,7 @@ namespace CalculationConsole
 {
    class Program
    {
-      static void Main(string[] args)
+      static void Main()
       {
          Console.InputEncoding = System.Text.Encoding.UTF8;
          Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -28,7 +28,7 @@ namespace CalculationConsole
          var response = new CalculationResponse();
          try
          {
-            var request = JsonConvert.DeserializeObject<CalculationRequest>(json);
+            CalculationRequest request = JsonConvert.DeserializeObject<CalculationRequest>(json);
             if (request == null || request.Numbers == null || !request.Numbers.Any())
             {
                response.Success = false;
@@ -37,26 +37,27 @@ namespace CalculationConsole
             else
             {
                double result = 0;
-               var steps = new List<string>();
+               List<string> steps = new List<string>();
 
-               switch (request.Operation?.ToLower())
+               if (request.Operation?.ToLower() == "сумма")
                {
-                  case "сумма":
-                     result = request.Numbers.Sum();
-                     steps.Add($"Суммировали {request.Numbers.Count} чисел");
-                     break;
-                  case "product":
-                     result = request.Numbers.Aggregate(1.0, (acc, x) => acc * x);
-                     steps.Add("Вычислили произведение");
-                     break;
-                  case "average":
-                     result = request.Numbers.Average();
-                     steps.Add("Вычислили среднее арифметическое");
-                     break;
-                  default:
-                     response.Success = false;
-                     response.ErrorMessage = $"Операция '{request.Operation}' не поддерживается";
-                     break;
+                  result = request.Numbers.Sum();
+                  steps.Add($"Суммировали {request.Numbers.Count} чисел");
+               }
+               else if (request.Operation?.ToLower() == "product")
+               {
+                  result = request.Numbers.Aggregate(1.0, (acc, x) => acc * x);
+                  steps.Add("Вычислили произведение");
+               }
+               else if (request.Operation?.ToLower() == "average")
+               {
+                  result = request.Numbers.Average();
+                  steps.Add("Вычислили среднее арифметическое");
+               }
+               else
+               {
+                  response.Success = false;
+                  response.ErrorMessage = $"Операция '{request.Operation}' не поддерживается";
                }
 
                if (response.Success || response.ErrorMessage == null)
@@ -76,7 +77,7 @@ namespace CalculationConsole
          catch (Exception ex)
          {
             response.Success = false;
-            response.ErrorMessage = $"Ошибка обработки: {ex.Message}";
+            response.ErrorMessage = string.Format("Ошибка обработки: {0}", ex.Message);
          }
 
          // Отправляем результат обратно
