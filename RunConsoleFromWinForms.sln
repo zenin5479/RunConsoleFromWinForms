@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculationConsole", "CalculationConsole\CalculationConsole.csproj", "{244C2CB7-6A9B-40C9-B84F-5EE104C69E03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp", "WinFormsApp\WinFormsApp.csproj", "{F5AAB069-CE58-40CD-98F3-1F33A4777E2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{244C2CB7-6A9B-40C9-B84F-5EE104C69E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{244C2CB7-6A9B-40C9-B84F-5EE104C69E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{244C2CB7-6A9B-40C9-B84F-5EE104C69E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5AAB069-CE58-40CD-98F3-1F33A4777E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5AAB069-CE58-40CD-98F3-1F33A4777E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5AAB069-CE58-40CD-98F3-1F33A4777E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5AAB069-CE58-40CD-98F3-1F33A4777E2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
