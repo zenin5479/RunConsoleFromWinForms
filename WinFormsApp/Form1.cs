@@ -18,7 +18,6 @@ namespace WinFormsApp
       public Form1()
       {
          InitializeComponent();
-         //Load += Form1_Load;
          FormClosing += Form1_FormClosing;
       }
 
