@@ -8,6 +8,11 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
       <HintPath>bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharedLibrary">
+      <HintPath>..\SharedLibrary\bin\Debug\netcoreapp3.1\SharedLibrary.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
 
