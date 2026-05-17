@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RunConsoleFromWinForms", "RunConsoleFromWinForms.shproj", "{68982A10-8A36-4147-B9EB-680432225DC8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{96ACCC4E-A52E-437D-8C88-2970F26F41C6}"
 EndProject
 Global
@@ -23,8 +21,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B9EB48A-6AF3-4465-8EB8-AC25DAB3EF25}
-	EndGlobalSection
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		RunConsoleFromWinForms.projitems*{68982a10-8a36-4147-b9eb-680432225dc8}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
