@@ -11,10 +11,10 @@ namespace WinFormsApp
    public partial class Form1 : Form
    {
       // Процесс консольного приложения
-      private Process consoleProcess;
-      private StreamWriter consoleInput;
-      private StreamReader consoleOutput;
-      private StreamReader consoleError;   // ← добавить здесь
+      private Process _consoleProcess;
+      private StreamWriter _consoleInput;
+      private StreamReader _consoleOutput;
+      private StreamReader _consoleError;
 
       public Form1()
       {
@@ -47,8 +47,8 @@ namespace WinFormsApp
             string jsonRequest = JsonConvert.SerializeObject(request);
 
             // Отправляем в консоль
-            consoleInput.WriteLine(jsonRequest);
-            consoleInput.Flush(); // обязательно отправляем данные
+            _consoleInput.WriteLine(jsonRequest);
+            _consoleInput.Flush(); // обязательно отправляем данные
 
             // Читаем ответ (строка JSON)
             //string jsonResponse = consoleOutput.ReadLine();
@@ -58,10 +58,10 @@ namespace WinFormsApp
             //   return;
             //}
 
-            string jsonResponse = consoleOutput.ReadLine();
+            string jsonResponse = _consoleOutput.ReadLine();
             if (jsonResponse == null)
             {
-               string errorText = consoleError.ReadToEnd();
+               string errorText = _consoleError.ReadToEnd();
                lblResult.Text = string.Format(@"Консоль упала. Ошибка: {0}", errorText);
                return;
             }
@@ -104,18 +104,18 @@ namespace WinFormsApp
             StandardErrorEncoding = System.Text.Encoding.UTF8
          };
 
-         consoleProcess = new Process { StartInfo = startInfo };
-         consoleProcess.Start();
+         _consoleProcess = new Process { StartInfo = startInfo };
+         _consoleProcess.Start();
 
          // Создаём StreamWriter БЕЗ BOM не потребуется вызывать Flush() после каждой записи
-         consoleInput = new StreamWriter(consoleProcess.StandardInput.BaseStream, new System.Text.UTF8Encoding(false))
+         _consoleInput = new StreamWriter(_consoleProcess.StandardInput.BaseStream, new System.Text.UTF8Encoding(false))
          {
             AutoFlush = true
          };
 
-         consoleOutput = consoleProcess.StandardOutput;
+         _consoleOutput = _consoleProcess.StandardOutput;
          // Добавили поле в класс
-         consoleError = consoleProcess.StandardError;
+         _consoleError = _consoleProcess.StandardError;
       }
 
       private void Form1_Load(object sender, EventArgs e)
@@ -127,18 +127,18 @@ namespace WinFormsApp
       private void Form1_FormClosing(object sender, FormClosingEventArgs e)
       {
          // Закрываем stdin консоли – это сигнал для неё завершиться
-         if (consoleInput != null)
+         if (_consoleInput != null)
          {
-            consoleInput.Close(); // закрывает поток и даёт консоли прочитать null
+            _consoleInput.Close(); // закрывает поток и даёт консоли прочитать null
          }
 
          // Ждём завершения консольного процесса (необязательно, но корректно)
-         if (consoleProcess != null && !consoleProcess.HasExited)
+         if (_consoleProcess != null && !_consoleProcess.HasExited)
          {
-            consoleProcess.WaitForExit(3000); // максимум 3 секунды
-            if (!consoleProcess.HasExited)
-               consoleProcess.Kill(); // на всякий случай
-            consoleProcess.Close();
+            _consoleProcess.WaitForExit(3000); // максимум 3 секунды
+            if (!_consoleProcess.HasExited)
+               _consoleProcess.Kill(); // на всякий случай
+            _consoleProcess.Close();
          }
       }
    }
