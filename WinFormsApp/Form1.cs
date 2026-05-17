@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using SharedLibrary;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using Newtonsoft.Json;
-using SharedLibrary;
 
 namespace WinFormsApp
 {
@@ -80,12 +80,13 @@ namespace WinFormsApp
       {
          var startInfo = new ProcessStartInfo
          {
-            FileName = "CalculationConsole.exe",  // предполагаем, что exe лежит в той же папке
+            FileName = "CalculationConsole.exe",
             UseShellExecute = false,
             RedirectStandardInput = true,
             RedirectStandardOutput = true,
             RedirectStandardError = false,
-            CreateNoWindow = true   // не показывать окно консоли
+            CreateNoWindow = false,            // показывать окно консоли
+            //WindowStyle = ProcessWindowStyle.Normal // можно не указывать
          };
 
          consoleProcess = new Process { StartInfo = startInfo };
