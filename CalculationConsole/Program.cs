@@ -10,6 +10,9 @@ namespace CalculationConsole
    {
       static void Main(string[] args)
       {
+         Console.InputEncoding = System.Text.Encoding.UTF8;
+         Console.OutputEncoding = System.Text.Encoding.UTF8;
+
          // Работаем до тех пор, пока входной поток не будет закрыт родительским процессом
          string line;
          while ((line = Console.ReadLine()) != null)
