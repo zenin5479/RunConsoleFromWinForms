@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using SharedLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Newtonsoft.Json;
-using SharedLibrary;
 
 namespace CalculationConsole
 {

@@ -33,6 +33,7 @@
          chkRound = new System.Windows.Forms.CheckBox();
          nudPrecision = new System.Windows.Forms.NumericUpDown();
          btnCalculate = new System.Windows.Forms.Button();
+         lblResult = new System.Windows.Forms.Label();
          ((System.ComponentModel.ISupportInitialize)nudPrecision).BeginInit();
          SuspendLayout();
          // 
@@ -81,11 +82,21 @@
          btnCalculate.UseVisualStyleBackColor = true;
          btnCalculate.Click += btnCalculate_Click;
          // 
+         // lblResult
+         // 
+         lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+         lblResult.Location = new System.Drawing.Point(12, 133);
+         lblResult.Name = "lblResult";
+         lblResult.Size = new System.Drawing.Size(300, 60);
+         lblResult.TabIndex = 5;
+         lblResult.Text = "Результат: ";
+         // 
          // Form1
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          ClientSize = new System.Drawing.Size(668, 408);
+         Controls.Add(lblResult);
          Controls.Add(btnCalculate);
          Controls.Add(nudPrecision);
          Controls.Add(chkRound);
@@ -93,6 +104,7 @@
          Controls.Add(txtOperation);
          Name = "Form1";
          Text = "Form1";
+         Load += Form1_Load;
          ((System.ComponentModel.ISupportInitialize)nudPrecision).EndInit();
          ResumeLayout(false);
          PerformLayout();
@@ -105,5 +117,6 @@
       private System.Windows.Forms.CheckBox chkRound;
       private System.Windows.Forms.NumericUpDown nudPrecision;
       private System.Windows.Forms.Button btnCalculate;
+      private System.Windows.Forms.Label lblResult;
    }
 }
