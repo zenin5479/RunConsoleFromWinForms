@@ -41,7 +41,7 @@ namespace CalculationConsole
 
                switch (request.Operation?.ToLower())
                {
-                  case "sum":
+                  case "сумма":
                      result = request.Numbers.Sum();
                      steps.Add($"Суммировали {request.Numbers.Count} чисел");
                      break;

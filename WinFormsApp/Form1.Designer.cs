@@ -43,7 +43,7 @@
          txtOperation.Name = "txtOperation";
          txtOperation.Size = new System.Drawing.Size(100, 23);
          txtOperation.TabIndex = 0;
-         txtOperation.Text = "sum";
+         txtOperation.Text = "сумма";
          // 
          // txtNumbers
          // 
