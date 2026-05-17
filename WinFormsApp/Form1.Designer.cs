@@ -31,6 +31,8 @@
          txtOperation = new System.Windows.Forms.TextBox();
          txtNumbers = new System.Windows.Forms.TextBox();
          chkRound = new System.Windows.Forms.CheckBox();
+         nudPrecision = new System.Windows.Forms.NumericUpDown();
+         ((System.ComponentModel.ISupportInitialize)nudPrecision).BeginInit();
          SuspendLayout();
          // 
          // txtOperation
@@ -52,23 +54,32 @@
          // chkRound
          // 
          chkRound.AutoSize = true;
-         chkRound.Location = new System.Drawing.Point(200, 20);
+         chkRound.Location = new System.Drawing.Point(118, 14);
          chkRound.Name = "chkRound";
          chkRound.Size = new System.Drawing.Size(140, 19);
          chkRound.TabIndex = 2;
          chkRound.Text = "Округлить результат";
          chkRound.UseVisualStyleBackColor = true;
          // 
+         // nudPrecision
+         // 
+         nudPrecision.Location = new System.Drawing.Point(118, 41);
+         nudPrecision.Name = "nudPrecision";
+         nudPrecision.Size = new System.Drawing.Size(120, 23);
+         nudPrecision.TabIndex = 3;
+         // 
          // Form1
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          ClientSize = new System.Drawing.Size(668, 408);
+         Controls.Add(nudPrecision);
          Controls.Add(chkRound);
          Controls.Add(txtNumbers);
          Controls.Add(txtOperation);
          Name = "Form1";
          Text = "Form1";
+         ((System.ComponentModel.ISupportInitialize)nudPrecision).EndInit();
          ResumeLayout(false);
          PerformLayout();
       }
@@ -78,5 +89,6 @@
       private System.Windows.Forms.TextBox txtOperation;
       private System.Windows.Forms.TextBox txtNumbers;
       private System.Windows.Forms.CheckBox chkRound;
+      private System.Windows.Forms.NumericUpDown nudPrecision;
    }
 }
