@@ -14,6 +14,7 @@ namespace WinFormsApp
       private Process consoleProcess;
       private StreamWriter consoleInput;
       private StreamReader consoleOutput;
+      private StreamReader consoleError;   // ← добавить здесь
 
       public Form1()
       {
@@ -50,10 +51,18 @@ namespace WinFormsApp
             consoleInput.Flush(); // обязательно отправляем данные
 
             // Читаем ответ (строка JSON)
+            //string jsonResponse = consoleOutput.ReadLine();
+            //if (jsonResponse == null)
+            //{
+            //   lblResult.Text = "Консольное приложение завершилось неожиданно.";
+            //   return;
+            //}
+
             string jsonResponse = consoleOutput.ReadLine();
             if (jsonResponse == null)
             {
-               lblResult.Text = "Консольное приложение завершилось неожиданно.";
+               string errorText = consoleError.ReadToEnd();
+               lblResult.Text = string.Format(@"Консоль упала. Ошибка: {0}", errorText);
                return;
             }
 
@@ -61,17 +70,16 @@ namespace WinFormsApp
 
             if (response.Success)
             {
-               lblResult.Text = $"Результат: {response.Result}\r\n" +
-                                string.Join("\r\n", response.Steps);
+               lblResult.Text = string.Format("Результат: {0}\r\n", response.Result) + string.Join("\r\n", response.Steps);
             }
             else
             {
-               lblResult.Text = $"Ошибка: {response.ErrorMessage}";
+               lblResult.Text = string.Format(@"Ошибка: {0}", response.ErrorMessage);
             }
          }
          catch (Exception ex)
          {
-            lblResult.Text = $"Ошибка: {ex.Message}";
+            lblResult.Text = string.Format(@"Ошибка: {0}", ex.Message);
          }
       }
 
@@ -79,24 +87,19 @@ namespace WinFormsApp
       {
          var startInfo = new ProcessStartInfo
          {
-
-
-
-
-
-
-
             FileName = "CalculationConsole.exe",
             UseShellExecute = false,
             RedirectStandardInput = true,
             RedirectStandardOutput = true,
-            RedirectStandardError = false,
-            // Показывать окно консоли
+            // Включить если нужно читать ошибки консоли или false, если не нужно
+            RedirectStandardError = true,
+            // Показывать окно консоли или true, если окно не нужно
             CreateNoWindow = false,
             // Можно не указывать
             WindowStyle = ProcessWindowStyle.Normal,
             // Устанавливаем UTF-8 для обоих потоков
             StandardOutputEncoding = System.Text.Encoding.UTF8,
+            // Можно вообще убрать StandardErrorEncoding
             StandardErrorEncoding = System.Text.Encoding.UTF8
          };
 
@@ -105,6 +108,8 @@ namespace WinFormsApp
 
          consoleInput = consoleProcess.StandardInput;
          consoleOutput = consoleProcess.StandardOutput;
+         // Добавили поле в класс
+         consoleError = consoleProcess.StandardError;
       }
 
       private void Form1_Load(object sender, EventArgs e)
