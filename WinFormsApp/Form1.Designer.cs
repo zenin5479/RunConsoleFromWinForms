@@ -32,6 +32,7 @@
          txtNumbers = new System.Windows.Forms.TextBox();
          chkRound = new System.Windows.Forms.CheckBox();
          nudPrecision = new System.Windows.Forms.NumericUpDown();
+         btnCalculate = new System.Windows.Forms.Button();
          ((System.ComponentModel.ISupportInitialize)nudPrecision).BeginInit();
          SuspendLayout();
          // 
@@ -64,15 +65,27 @@
          // nudPrecision
          // 
          nudPrecision.Location = new System.Drawing.Point(118, 41);
+         nudPrecision.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
          nudPrecision.Name = "nudPrecision";
          nudPrecision.Size = new System.Drawing.Size(120, 23);
          nudPrecision.TabIndex = 3;
+         nudPrecision.Value = new decimal(new int[] { 2, 0, 0, 0 });
+         // 
+         // btnCalculate
+         // 
+         btnCalculate.Location = new System.Drawing.Point(67, 131);
+         btnCalculate.Name = "btnCalculate";
+         btnCalculate.Size = new System.Drawing.Size(75, 23);
+         btnCalculate.TabIndex = 4;
+         btnCalculate.Text = "button1";
+         btnCalculate.UseVisualStyleBackColor = true;
          // 
          // Form1
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          ClientSize = new System.Drawing.Size(668, 408);
+         Controls.Add(btnCalculate);
          Controls.Add(nudPrecision);
          Controls.Add(chkRound);
          Controls.Add(txtNumbers);
@@ -90,5 +103,6 @@
       private System.Windows.Forms.TextBox txtNumbers;
       private System.Windows.Forms.CheckBox chkRound;
       private System.Windows.Forms.NumericUpDown nudPrecision;
+      private System.Windows.Forms.Button btnCalculate;
    }
 }
