@@ -20,7 +20,7 @@ namespace CalculationConsole
             ProcessLine(line);
          }
          // При закрытии stdin (WinForms закрывает свой writer) цикл завершается,
-         // Main заканчивается, консольное приложение останавливается.
+         // Main заканчивается, консольное приложение останавливается
       }
 
       static void ProcessLine(string json)

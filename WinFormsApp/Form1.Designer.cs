@@ -85,9 +85,9 @@
          // lblResult
          // 
          lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-         lblResult.Location = new System.Drawing.Point(12, 133);
+         lblResult.Location = new System.Drawing.Point(12, 96);
          lblResult.Name = "lblResult";
-         lblResult.Size = new System.Drawing.Size(300, 60);
+         lblResult.Size = new System.Drawing.Size(246, 60);
          lblResult.TabIndex = 5;
          lblResult.Text = "Результат: ";
          // 
@@ -95,7 +95,7 @@
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         ClientSize = new System.Drawing.Size(668, 408);
+         ClientSize = new System.Drawing.Size(272, 170);
          Controls.Add(lblResult);
          Controls.Add(btnCalculate);
          Controls.Add(nudPrecision);
