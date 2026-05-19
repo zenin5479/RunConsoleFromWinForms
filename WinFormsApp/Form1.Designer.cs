@@ -58,7 +58,7 @@
          // chkRound
          // 
          chkRound.AutoSize = true;
-         chkRound.Location = new System.Drawing.Point(118, 29);
+         chkRound.Location = new System.Drawing.Point(118, 8);
          chkRound.Name = "chkRound";
          chkRound.Size = new System.Drawing.Size(140, 19);
          chkRound.TabIndex = 2;
@@ -67,7 +67,7 @@
          // 
          // nudPrecision
          // 
-         nudPrecision.Location = new System.Drawing.Point(174, 51);
+         nudPrecision.Location = new System.Drawing.Point(184, 27);
          nudPrecision.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
          nudPrecision.Name = "nudPrecision";
          nudPrecision.Size = new System.Drawing.Size(74, 23);
