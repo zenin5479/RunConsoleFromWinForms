@@ -107,9 +107,9 @@
          labelNumbers.AutoSize = true;
          labelNumbers.Location = new System.Drawing.Point(32, 75);
          labelNumbers.Name = "labelNumbers";
-         labelNumbers.Size = new System.Drawing.Size(38, 15);
+         labelNumbers.Size = new System.Drawing.Size(70, 15);
          labelNumbers.TabIndex = 7;
-         labelNumbers.Text = "label2";
+         labelNumbers.Text = "Операторы";
          // 
          // Form1
          // 
