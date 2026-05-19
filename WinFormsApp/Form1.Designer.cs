@@ -87,7 +87,7 @@
          // lblResult
          // 
          lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-         lblResult.Location = new System.Drawing.Point(2, 250);
+         lblResult.Location = new System.Drawing.Point(12, 126);
          lblResult.Name = "lblResult";
          lblResult.Size = new System.Drawing.Size(246, 60);
          lblResult.TabIndex = 5;
