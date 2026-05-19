@@ -111,7 +111,7 @@
          labelNumbers.TabIndex = 7;
          labelNumbers.Text = "Операторы";
          // 
-         // Form1
+         // MainForm
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,8 +126,7 @@
          Controls.Add(txtOperation);
          MaximizeBox = false;
          MinimizeBox = false;
-         Name = "Form1";
-         StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+         Name = "MainForm";
          Text = "Калькулятор";
          Load += Form1_Load;
          ((System.ComponentModel.ISupportInitialize)nudPrecision).EndInit();
