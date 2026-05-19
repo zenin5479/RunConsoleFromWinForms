@@ -34,12 +34,14 @@
          nudPrecision = new System.Windows.Forms.NumericUpDown();
          btnCalculate = new System.Windows.Forms.Button();
          lblResult = new System.Windows.Forms.Label();
+         label1 = new System.Windows.Forms.Label();
+         label2 = new System.Windows.Forms.Label();
          ((System.ComponentModel.ISupportInitialize)nudPrecision).BeginInit();
          SuspendLayout();
          // 
          // txtOperation
          // 
-         txtOperation.Location = new System.Drawing.Point(12, 12);
+         txtOperation.Location = new System.Drawing.Point(12, 56);
          txtOperation.Name = "txtOperation";
          txtOperation.Size = new System.Drawing.Size(100, 23);
          txtOperation.TabIndex = 0;
@@ -47,7 +49,7 @@
          // 
          // txtNumbers
          // 
-         txtNumbers.Location = new System.Drawing.Point(12, 41);
+         txtNumbers.Location = new System.Drawing.Point(12, 105);
          txtNumbers.Name = "txtNumbers";
          txtNumbers.Size = new System.Drawing.Size(100, 23);
          txtNumbers.TabIndex = 1;
@@ -56,7 +58,7 @@
          // chkRound
          // 
          chkRound.AutoSize = true;
-         chkRound.Location = new System.Drawing.Point(118, 14);
+         chkRound.Location = new System.Drawing.Point(168, 60);
          chkRound.Name = "chkRound";
          chkRound.Size = new System.Drawing.Size(140, 19);
          chkRound.TabIndex = 2;
@@ -65,7 +67,7 @@
          // 
          // nudPrecision
          // 
-         nudPrecision.Location = new System.Drawing.Point(118, 41);
+         nudPrecision.Location = new System.Drawing.Point(138, 106);
          nudPrecision.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
          nudPrecision.Name = "nudPrecision";
          nudPrecision.Size = new System.Drawing.Size(120, 23);
@@ -74,7 +76,7 @@
          // 
          // btnCalculate
          // 
-         btnCalculate.Location = new System.Drawing.Point(12, 70);
+         btnCalculate.Location = new System.Drawing.Point(12, 163);
          btnCalculate.Name = "btnCalculate";
          btnCalculate.Size = new System.Drawing.Size(100, 23);
          btnCalculate.TabIndex = 4;
@@ -85,17 +87,37 @@
          // lblResult
          // 
          lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-         lblResult.Location = new System.Drawing.Point(12, 96);
+         lblResult.Location = new System.Drawing.Point(2, 250);
          lblResult.Name = "lblResult";
          lblResult.Size = new System.Drawing.Size(246, 60);
          lblResult.TabIndex = 5;
          lblResult.Text = "Результат: ";
          // 
+         // label1
+         // 
+         label1.AutoSize = true;
+         label1.Location = new System.Drawing.Point(38, 17);
+         label1.Name = "label1";
+         label1.Size = new System.Drawing.Size(38, 15);
+         label1.TabIndex = 6;
+         label1.Text = "label1";
+         // 
+         // label2
+         // 
+         label2.AutoSize = true;
+         label2.Location = new System.Drawing.Point(52, 139);
+         label2.Name = "label2";
+         label2.Size = new System.Drawing.Size(38, 15);
+         label2.TabIndex = 7;
+         label2.Text = "label2";
+         // 
          // Form1
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         ClientSize = new System.Drawing.Size(272, 170);
+         ClientSize = new System.Drawing.Size(308, 319);
+         Controls.Add(label2);
+         Controls.Add(label1);
          Controls.Add(lblResult);
          Controls.Add(btnCalculate);
          Controls.Add(nudPrecision);
@@ -120,5 +142,7 @@
       private System.Windows.Forms.NumericUpDown nudPrecision;
       private System.Windows.Forms.Button btnCalculate;
       private System.Windows.Forms.Label lblResult;
+      private System.Windows.Forms.Label label1;
+      private System.Windows.Forms.Label label2;
    }
 }
