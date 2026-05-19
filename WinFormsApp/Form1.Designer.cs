@@ -35,13 +35,13 @@
          btnCalculate = new System.Windows.Forms.Button();
          lblResult = new System.Windows.Forms.Label();
          labelOperation = new System.Windows.Forms.Label();
-         label2 = new System.Windows.Forms.Label();
+         labelNumbers = new System.Windows.Forms.Label();
          ((System.ComponentModel.ISupportInitialize)nudPrecision).BeginInit();
          SuspendLayout();
          // 
          // txtOperation
          // 
-         txtOperation.Location = new System.Drawing.Point(12, 56);
+         txtOperation.Location = new System.Drawing.Point(12, 27);
          txtOperation.Name = "txtOperation";
          txtOperation.Size = new System.Drawing.Size(100, 23);
          txtOperation.TabIndex = 0;
@@ -96,27 +96,27 @@
          // labelOperation
          // 
          labelOperation.AutoSize = true;
-         labelOperation.Location = new System.Drawing.Point(38, 17);
+         labelOperation.Location = new System.Drawing.Point(12, 9);
          labelOperation.Name = "labelOperation";
          labelOperation.Size = new System.Drawing.Size(58, 15);
          labelOperation.TabIndex = 6;
          labelOperation.Text = "Действие";
          // 
-         // label2
+         // labelNumbers
          // 
-         label2.AutoSize = true;
-         label2.Location = new System.Drawing.Point(52, 139);
-         label2.Name = "label2";
-         label2.Size = new System.Drawing.Size(38, 15);
-         label2.TabIndex = 7;
-         label2.Text = "label2";
+         labelNumbers.AutoSize = true;
+         labelNumbers.Location = new System.Drawing.Point(32, 75);
+         labelNumbers.Name = "labelNumbers";
+         labelNumbers.Size = new System.Drawing.Size(38, 15);
+         labelNumbers.TabIndex = 7;
+         labelNumbers.Text = "label2";
          // 
          // Form1
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          ClientSize = new System.Drawing.Size(308, 319);
-         Controls.Add(label2);
+         Controls.Add(labelNumbers);
          Controls.Add(labelOperation);
          Controls.Add(lblResult);
          Controls.Add(btnCalculate);
@@ -143,6 +143,6 @@
       private System.Windows.Forms.Button btnCalculate;
       private System.Windows.Forms.Label lblResult;
       private System.Windows.Forms.Label labelOperation;
-      private System.Windows.Forms.Label label2;
+      private System.Windows.Forms.Label labelNumbers;
    }
 }
