@@ -103,6 +103,7 @@
          Controls.Add(txtNumbers);
          Controls.Add(txtOperation);
          MaximizeBox = false;
+         MinimizeBox = false;
          Name = "Form1";
          Text = "Калькулятор";
          Load += Form1_Load;
