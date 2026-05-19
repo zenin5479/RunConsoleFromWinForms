@@ -102,6 +102,7 @@
          Controls.Add(chkRound);
          Controls.Add(txtNumbers);
          Controls.Add(txtOperation);
+         MaximizeBox = false;
          Name = "Form1";
          Text = "Калькулятор";
          Load += Form1_Load;
