@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace WinFormsApp
 {
-   public partial class Form1 : Form
+   public partial class MainForm : Form
    {
       // Процесс консольного приложения
       private Process _consoleProcess;
@@ -17,7 +17,7 @@ namespace WinFormsApp
       private StreamReader _consoleOutput;
       private StreamReader _consoleError;
 
-      public Form1()
+      public MainForm()
       {
          InitializeComponent();
          FormClosing += Form1_FormClosing;
