@@ -98,9 +98,9 @@
          labelOperation.AutoSize = true;
          labelOperation.Location = new System.Drawing.Point(12, 9);
          labelOperation.Name = "labelOperation";
-         labelOperation.Size = new System.Drawing.Size(58, 15);
+         labelOperation.Size = new System.Drawing.Size(61, 15);
          labelOperation.TabIndex = 6;
-         labelOperation.Text = "Действие";
+         labelOperation.Text = "Действие:";
          // 
          // labelNumbers
          // 
