@@ -127,6 +127,7 @@
          MaximizeBox = false;
          MinimizeBox = false;
          Name = "MainForm";
+         StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          Text = "Калькулятор";
          Load += Form1_Load;
          ((System.ComponentModel.ISupportInitialize)nudPrecision).EndInit();
