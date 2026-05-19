@@ -49,7 +49,7 @@
          // 
          // txtNumbers
          // 
-         txtNumbers.Location = new System.Drawing.Point(12, 105);
+         txtNumbers.Location = new System.Drawing.Point(12, 71);
          txtNumbers.Name = "txtNumbers";
          txtNumbers.Size = new System.Drawing.Size(100, 23);
          txtNumbers.TabIndex = 1;
@@ -58,7 +58,7 @@
          // chkRound
          // 
          chkRound.AutoSize = true;
-         chkRound.Location = new System.Drawing.Point(168, 60);
+         chkRound.Location = new System.Drawing.Point(118, 29);
          chkRound.Name = "chkRound";
          chkRound.Size = new System.Drawing.Size(140, 19);
          chkRound.TabIndex = 2;
@@ -67,16 +67,16 @@
          // 
          // nudPrecision
          // 
-         nudPrecision.Location = new System.Drawing.Point(138, 106);
+         nudPrecision.Location = new System.Drawing.Point(174, 51);
          nudPrecision.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
          nudPrecision.Name = "nudPrecision";
-         nudPrecision.Size = new System.Drawing.Size(120, 23);
+         nudPrecision.Size = new System.Drawing.Size(74, 23);
          nudPrecision.TabIndex = 3;
          nudPrecision.Value = new decimal(new int[] { 2, 0, 0, 0 });
          // 
          // btnCalculate
          // 
-         btnCalculate.Location = new System.Drawing.Point(12, 163);
+         btnCalculate.Location = new System.Drawing.Point(12, 100);
          btnCalculate.Name = "btnCalculate";
          btnCalculate.Size = new System.Drawing.Size(100, 23);
          btnCalculate.TabIndex = 4;
@@ -105,7 +105,7 @@
          // labelNumbers
          // 
          labelNumbers.AutoSize = true;
-         labelNumbers.Location = new System.Drawing.Point(32, 75);
+         labelNumbers.Location = new System.Drawing.Point(12, 53);
          labelNumbers.Name = "labelNumbers";
          labelNumbers.Size = new System.Drawing.Size(70, 15);
          labelNumbers.TabIndex = 7;
