@@ -103,7 +103,7 @@
          Controls.Add(txtNumbers);
          Controls.Add(txtOperation);
          Name = "Form1";
-         Text = "Form1";
+         Text = "Калькулятор";
          Load += Form1_Load;
          ((System.ComponentModel.ISupportInitialize)nudPrecision).EndInit();
          ResumeLayout(false);
