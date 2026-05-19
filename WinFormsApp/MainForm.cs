@@ -20,7 +20,7 @@ namespace WinFormsApp
       public MainForm()
       {
          InitializeComponent();
-         FormClosing += Form1_FormClosing;
+         FormClosing += MainForm_FormClosing;
       }
 
       // Обработчик нажатия кнопки (синхронный, без многопоточности!)
@@ -126,7 +126,7 @@ namespace WinFormsApp
          StartConsoleApp();
       }
 
-      private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+      private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
       {
          // Закрываем stdin консоли – это сигнал для неё завершиться
          if (_consoleInput != null)
