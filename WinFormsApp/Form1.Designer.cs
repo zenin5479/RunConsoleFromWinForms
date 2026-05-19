@@ -34,7 +34,7 @@
          nudPrecision = new System.Windows.Forms.NumericUpDown();
          btnCalculate = new System.Windows.Forms.Button();
          lblResult = new System.Windows.Forms.Label();
-         label1 = new System.Windows.Forms.Label();
+         labelOperation = new System.Windows.Forms.Label();
          label2 = new System.Windows.Forms.Label();
          ((System.ComponentModel.ISupportInitialize)nudPrecision).BeginInit();
          SuspendLayout();
@@ -93,14 +93,14 @@
          lblResult.TabIndex = 5;
          lblResult.Text = "Результат: ";
          // 
-         // label1
+         // labelOperation
          // 
-         label1.AutoSize = true;
-         label1.Location = new System.Drawing.Point(38, 17);
-         label1.Name = "label1";
-         label1.Size = new System.Drawing.Size(38, 15);
-         label1.TabIndex = 6;
-         label1.Text = "label1";
+         labelOperation.AutoSize = true;
+         labelOperation.Location = new System.Drawing.Point(38, 17);
+         labelOperation.Name = "labelOperation";
+         labelOperation.Size = new System.Drawing.Size(38, 15);
+         labelOperation.TabIndex = 6;
+         labelOperation.Text = "label1";
          // 
          // label2
          // 
@@ -117,7 +117,7 @@
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          ClientSize = new System.Drawing.Size(308, 319);
          Controls.Add(label2);
-         Controls.Add(label1);
+         Controls.Add(labelOperation);
          Controls.Add(lblResult);
          Controls.Add(btnCalculate);
          Controls.Add(nudPrecision);
@@ -142,7 +142,7 @@
       private System.Windows.Forms.NumericUpDown nudPrecision;
       private System.Windows.Forms.Button btnCalculate;
       private System.Windows.Forms.Label lblResult;
-      private System.Windows.Forms.Label label1;
+      private System.Windows.Forms.Label labelOperation;
       private System.Windows.Forms.Label label2;
    }
 }
