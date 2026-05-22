@@ -39,17 +39,17 @@ namespace CalculationConsole
                double result = 0;
                List<string> steps = new List<string>();
 
-               if (request.Operation?.ToLower() == "сумма")
+               if (request.Operation.ToLower() == "сумма")
                {
                   result = request.Numbers.Sum();
                   steps.Add($"Суммировали {request.Numbers.Count} чисел");
                }
-               else if (request.Operation?.ToLower() == "произведение")
+               else if (request.Operation.ToLower() == "произведение")
                {
                   result = request.Numbers.Aggregate(1.0, (acc, x) => acc * x);
                   steps.Add("Вычислили произведение");
                }
-               else if (request.Operation?.ToLower() == "среднее арифметическое")
+               else if (request.Operation.ToLower() == "среднее арифметическое")
                {
                   result = request.Numbers.Average();
                   steps.Add("Вычислили среднее арифметическое");
