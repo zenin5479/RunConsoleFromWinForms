@@ -15,7 +15,6 @@ namespace WinFormsApp
       private Process _consoleProcess;
       private StreamWriter _consoleInput;
       private StreamReader _consoleOutput;
-      private StreamReader _consoleError;
 
       public MainForm()
       {
@@ -109,7 +108,6 @@ namespace WinFormsApp
 
          _consoleOutput = _consoleProcess.StandardOutput;
          // Добавили поле в класс
-         _consoleError = _consoleProcess.StandardError;
       }
 
       private void MainForm_Load(object sender, EventArgs e)
