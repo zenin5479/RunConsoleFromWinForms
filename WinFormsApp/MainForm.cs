@@ -60,8 +60,6 @@ namespace WinFormsApp
                return;
             }
 
-            
-
             CalculationResponse response = JsonConvert.DeserializeObject<CalculationResponse>(jsonResponse);
 
             if (response.Success)
