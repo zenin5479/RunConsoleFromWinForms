@@ -60,13 +60,7 @@ namespace WinFormsApp
                return;
             }
 
-            string jsonResponse = _consoleOutput.ReadLine();
-            if (jsonResponse == null)
-            {
-               string errorText = _consoleError.ReadToEnd();
-               lblResult.Text = string.Format(@"Консоль упала. Ошибка: {0}", errorText);
-               return;
-            }
+            
 
             CalculationResponse response = JsonConvert.DeserializeObject<CalculationResponse>(jsonResponse);
 
