@@ -53,12 +53,12 @@ namespace WinFormsApp
             _consoleInput.Flush();
 
             // Читаем ответ (строка JSON)
-            //string jsonResponse = consoleOutput.ReadLine();
-            //if (jsonResponse == null)
-            //{
-            //   lblResult.Text = "Консольное приложение завершилось неожиданно.";
-            //   return;
-            //}
+            string jsonResponse = consoleOutput.ReadLine();
+            if (jsonResponse == null)
+            {
+               lblResult.Text = string.Format(@"Консоль упала. Ошибка");
+               return;
+            }
 
             string jsonResponse = _consoleOutput.ReadLine();
             if (jsonResponse == null)
