@@ -43,14 +43,14 @@
          // 
          txtNumbers.Location = new System.Drawing.Point(12, 71);
          txtNumbers.Name = "txtNumbers";
-         txtNumbers.Size = new System.Drawing.Size(100, 23);
+         txtNumbers.Size = new System.Drawing.Size(220, 23);
          txtNumbers.TabIndex = 1;
          txtNumbers.Text = "12345";
          // 
          // chkRound
          // 
          chkRound.AutoSize = true;
-         chkRound.Location = new System.Drawing.Point(185, 29);
+         chkRound.Location = new System.Drawing.Point(12, 101);
          chkRound.Name = "chkRound";
          chkRound.Size = new System.Drawing.Size(140, 19);
          chkRound.TabIndex = 2;
@@ -59,7 +59,7 @@
          // 
          // nudPrecision
          // 
-         nudPrecision.Location = new System.Drawing.Point(185, 54);
+         nudPrecision.Location = new System.Drawing.Point(158, 100);
          nudPrecision.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
          nudPrecision.Name = "nudPrecision";
          nudPrecision.Size = new System.Drawing.Size(74, 23);
@@ -68,9 +68,9 @@
          // 
          // btnCalculate
          // 
-         btnCalculate.Location = new System.Drawing.Point(12, 100);
+         btnCalculate.Location = new System.Drawing.Point(12, 129);
          btnCalculate.Name = "btnCalculate";
-         btnCalculate.Size = new System.Drawing.Size(100, 23);
+         btnCalculate.Size = new System.Drawing.Size(94, 23);
          btnCalculate.TabIndex = 4;
          btnCalculate.Text = "Вычислить";
          btnCalculate.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
          // lblResult
          // 
          lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-         lblResult.Location = new System.Drawing.Point(12, 126);
+         lblResult.Location = new System.Drawing.Point(12, 195);
          lblResult.Name = "lblResult";
          lblResult.Size = new System.Drawing.Size(313, 65);
          lblResult.TabIndex = 5;
@@ -109,14 +109,14 @@
          ComboBoxOperation.Items.AddRange(new object[] { "сумма", "произведение", "среднее арифметическое" });
          ComboBoxOperation.Location = new System.Drawing.Point(12, 27);
          ComboBoxOperation.Name = "ComboBoxOperation";
-         ComboBoxOperation.Size = new System.Drawing.Size(167, 23);
+         ComboBoxOperation.Size = new System.Drawing.Size(220, 23);
          ComboBoxOperation.TabIndex = 10;
          // 
          // MainForm
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         ClientSize = new System.Drawing.Size(337, 200);
+         ClientSize = new System.Drawing.Size(435, 300);
          Controls.Add(ComboBoxOperation);
          Controls.Add(labelNumbers);
          Controls.Add(labelOperation);
