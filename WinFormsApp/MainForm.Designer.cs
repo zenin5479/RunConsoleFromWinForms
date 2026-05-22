@@ -50,7 +50,7 @@
          // chkRound
          // 
          chkRound.AutoSize = true;
-         chkRound.Location = new System.Drawing.Point(118, 8);
+         chkRound.Location = new System.Drawing.Point(185, 29);
          chkRound.Name = "chkRound";
          chkRound.Size = new System.Drawing.Size(140, 19);
          chkRound.TabIndex = 2;
@@ -59,7 +59,7 @@
          // 
          // nudPrecision
          // 
-         nudPrecision.Location = new System.Drawing.Point(184, 27);
+         nudPrecision.Location = new System.Drawing.Point(185, 54);
          nudPrecision.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
          nudPrecision.Name = "nudPrecision";
          nudPrecision.Size = new System.Drawing.Size(74, 23);
@@ -81,7 +81,7 @@
          lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
          lblResult.Location = new System.Drawing.Point(12, 126);
          lblResult.Name = "lblResult";
-         lblResult.Size = new System.Drawing.Size(246, 65);
+         lblResult.Size = new System.Drawing.Size(313, 65);
          lblResult.TabIndex = 5;
          lblResult.Text = "Результат: ";
          // 
@@ -107,7 +107,7 @@
          // 
          ComboBoxOperation.FormattingEnabled = true;
          ComboBoxOperation.Items.AddRange(new object[] { "сумма", "произведение", "среднее арифметическое" });
-         ComboBoxOperation.Location = new System.Drawing.Point(139, 71);
+         ComboBoxOperation.Location = new System.Drawing.Point(12, 27);
          ComboBoxOperation.Name = "ComboBoxOperation";
          ComboBoxOperation.Size = new System.Drawing.Size(167, 23);
          ComboBoxOperation.TabIndex = 10;
