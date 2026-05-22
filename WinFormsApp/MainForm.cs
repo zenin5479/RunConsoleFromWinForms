@@ -19,6 +19,7 @@ namespace WinFormsApp
       public MainForm()
       {
          InitializeComponent();
+         ComboBoxOperation.SelectedIndex = 0;
          FormClosing += MainForm_FormClosing;
       }
 
