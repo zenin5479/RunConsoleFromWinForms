@@ -116,7 +116,7 @@
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         ClientSize = new System.Drawing.Size(246, 300);
+         ClientSize = new System.Drawing.Size(246, 248);
          Controls.Add(ComboBoxOperation);
          Controls.Add(labelNumbers);
          Controls.Add(labelOperation);
