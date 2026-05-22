@@ -44,12 +44,12 @@ namespace CalculationConsole
                   result = request.Numbers.Sum();
                   steps.Add($"Суммировали {request.Numbers.Count} чисел");
                }
-               else if (request.Operation?.ToLower() == "product")
+               else if (request.Operation?.ToLower() == "произведение")
                {
                   result = request.Numbers.Aggregate(1.0, (acc, x) => acc * x);
                   steps.Add("Вычислили произведение");
                }
-               else if (request.Operation?.ToLower() == "average")
+               else if (request.Operation?.ToLower() == "среднее арифметическое")
                {
                   result = request.Numbers.Average();
                   steps.Add("Вычислили среднее арифметическое");
