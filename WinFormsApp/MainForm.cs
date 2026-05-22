@@ -56,7 +56,7 @@ namespace WinFormsApp
             string jsonResponse = _consoleOutput.ReadLine();
             if (jsonResponse == null)
             {
-               lblResult.Text = string.Format(@"Консоль упала. Ошибка");
+               lblResult.Text = @"Консоль упала. Ошибка";
                return;
             }
 
