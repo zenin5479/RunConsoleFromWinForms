@@ -28,7 +28,6 @@
       /// </summary>
       private void InitializeComponent()
       {
-         txtOperation = new System.Windows.Forms.TextBox();
          txtNumbers = new System.Windows.Forms.TextBox();
          chkRound = new System.Windows.Forms.CheckBox();
          nudPrecision = new System.Windows.Forms.NumericUpDown();
@@ -39,14 +38,6 @@
          ComboBoxOperation = new System.Windows.Forms.ComboBox();
          ((System.ComponentModel.ISupportInitialize)nudPrecision).BeginInit();
          SuspendLayout();
-         // 
-         // txtOperation
-         // 
-         txtOperation.Location = new System.Drawing.Point(12, 27);
-         txtOperation.Name = "txtOperation";
-         txtOperation.Size = new System.Drawing.Size(100, 23);
-         txtOperation.TabIndex = 0;
-         txtOperation.Text = "сумма";
          // 
          // txtNumbers
          // 
@@ -125,7 +116,7 @@
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         ClientSize = new System.Drawing.Size(349, 200);
+         ClientSize = new System.Drawing.Size(555, 200);
          Controls.Add(ComboBoxOperation);
          Controls.Add(labelNumbers);
          Controls.Add(labelOperation);
@@ -134,7 +125,6 @@
          Controls.Add(nudPrecision);
          Controls.Add(chkRound);
          Controls.Add(txtNumbers);
-         Controls.Add(txtOperation);
          MaximizeBox = false;
          MinimizeBox = false;
          Name = "MainForm";
@@ -147,8 +137,6 @@
       }
 
       #endregion
-
-      private System.Windows.Forms.TextBox txtOperation;
       private System.Windows.Forms.TextBox txtNumbers;
       private System.Windows.Forms.CheckBox chkRound;
       private System.Windows.Forms.NumericUpDown nudPrecision;
