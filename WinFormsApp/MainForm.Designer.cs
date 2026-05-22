@@ -43,7 +43,7 @@
          // 
          txtNumbers.Location = new System.Drawing.Point(12, 71);
          txtNumbers.Name = "txtNumbers";
-         txtNumbers.Size = new System.Drawing.Size(220, 23);
+         txtNumbers.Size = new System.Drawing.Size(222, 23);
          txtNumbers.TabIndex = 1;
          txtNumbers.Text = "12345";
          // 
@@ -62,7 +62,7 @@
          nudPrecision.Location = new System.Drawing.Point(158, 100);
          nudPrecision.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
          nudPrecision.Name = "nudPrecision";
-         nudPrecision.Size = new System.Drawing.Size(74, 23);
+         nudPrecision.Size = new System.Drawing.Size(76, 23);
          nudPrecision.TabIndex = 3;
          nudPrecision.Value = new decimal(new int[] { 2, 0, 0, 0 });
          // 
@@ -70,7 +70,7 @@
          // 
          btnCalculate.Location = new System.Drawing.Point(12, 129);
          btnCalculate.Name = "btnCalculate";
-         btnCalculate.Size = new System.Drawing.Size(94, 23);
+         btnCalculate.Size = new System.Drawing.Size(100, 23);
          btnCalculate.TabIndex = 4;
          btnCalculate.Text = "Вычислить";
          btnCalculate.UseVisualStyleBackColor = true;
@@ -79,9 +79,9 @@
          // lblResult
          // 
          lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-         lblResult.Location = new System.Drawing.Point(12, 195);
+         lblResult.Location = new System.Drawing.Point(12, 155);
          lblResult.Name = "lblResult";
-         lblResult.Size = new System.Drawing.Size(313, 65);
+         lblResult.Size = new System.Drawing.Size(222, 65);
          lblResult.TabIndex = 5;
          lblResult.Text = "Результат: ";
          // 
@@ -109,14 +109,14 @@
          ComboBoxOperation.Items.AddRange(new object[] { "сумма", "произведение", "среднее арифметическое" });
          ComboBoxOperation.Location = new System.Drawing.Point(12, 27);
          ComboBoxOperation.Name = "ComboBoxOperation";
-         ComboBoxOperation.Size = new System.Drawing.Size(220, 23);
+         ComboBoxOperation.Size = new System.Drawing.Size(222, 23);
          ComboBoxOperation.TabIndex = 10;
          // 
          // MainForm
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         ClientSize = new System.Drawing.Size(435, 300);
+         ClientSize = new System.Drawing.Size(246, 300);
          Controls.Add(ComboBoxOperation);
          Controls.Add(labelNumbers);
          Controls.Add(labelOperation);
