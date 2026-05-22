@@ -115,7 +115,7 @@
          // ComboBoxOperation
          // 
          ComboBoxOperation.FormattingEnabled = true;
-         ComboBoxOperation.Items.AddRange(new object[] { "Sum", "Multiply", "Average" });
+         ComboBoxOperation.Items.AddRange(new object[] { "сумма", "произведение", "среднее арифметическое" });
          ComboBoxOperation.Location = new System.Drawing.Point(139, 71);
          ComboBoxOperation.Name = "ComboBoxOperation";
          ComboBoxOperation.Size = new System.Drawing.Size(119, 23);
@@ -125,7 +125,7 @@
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         ClientSize = new System.Drawing.Size(270, 200);
+         ClientSize = new System.Drawing.Size(349, 200);
          Controls.Add(ComboBoxOperation);
          Controls.Add(labelNumbers);
          Controls.Add(labelOperation);
