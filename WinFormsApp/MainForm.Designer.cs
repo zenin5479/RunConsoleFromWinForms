@@ -81,7 +81,7 @@
          lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
          lblResult.Location = new System.Drawing.Point(12, 155);
          lblResult.Name = "lblResult";
-         lblResult.Size = new System.Drawing.Size(222, 65);
+         lblResult.Size = new System.Drawing.Size(222, 72);
          lblResult.TabIndex = 5;
          lblResult.Text = "Результат: ";
          // 
@@ -116,7 +116,7 @@
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         ClientSize = new System.Drawing.Size(246, 248);
+         ClientSize = new System.Drawing.Size(246, 236);
          Controls.Add(ComboBoxOperation);
          Controls.Add(labelNumbers);
          Controls.Add(labelOperation);
