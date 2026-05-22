@@ -35,6 +35,9 @@ namespace WinFormsApp
 
             CalculationRequest request = new CalculationRequest
             {
+               //Numbers = numbers,
+               //Operation = ComboBoxOperation.SelectedItem.ToString();
+
                Operation = txtOperation.Text.Trim(),
                Numbers = numbers,
                Parameters = new RequestParameters

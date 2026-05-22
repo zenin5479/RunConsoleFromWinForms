@@ -36,6 +36,7 @@
          lblResult = new System.Windows.Forms.Label();
          labelOperation = new System.Windows.Forms.Label();
          labelNumbers = new System.Windows.Forms.Label();
+         ComboBoxOperation = new System.Windows.Forms.ComboBox();
          ((System.ComponentModel.ISupportInitialize)nudPrecision).BeginInit();
          SuspendLayout();
          // 
@@ -111,11 +112,21 @@
          labelNumbers.TabIndex = 7;
          labelNumbers.Text = "Операторы:";
          // 
+         // ComboBoxOperation
+         // 
+         ComboBoxOperation.FormattingEnabled = true;
+         ComboBoxOperation.Items.AddRange(new object[] { "Sum", "Multiply", "Average" });
+         ComboBoxOperation.Location = new System.Drawing.Point(139, 71);
+         ComboBoxOperation.Name = "ComboBoxOperation";
+         ComboBoxOperation.Size = new System.Drawing.Size(119, 23);
+         ComboBoxOperation.TabIndex = 10;
+         // 
          // MainForm
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          ClientSize = new System.Drawing.Size(270, 200);
+         Controls.Add(ComboBoxOperation);
          Controls.Add(labelNumbers);
          Controls.Add(labelOperation);
          Controls.Add(lblResult);
@@ -145,5 +156,6 @@
       private System.Windows.Forms.Label lblResult;
       private System.Windows.Forms.Label labelOperation;
       private System.Windows.Forms.Label labelNumbers;
+      private System.Windows.Forms.ComboBox ComboBoxOperation;
    }
 }
