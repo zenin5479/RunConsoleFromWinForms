@@ -118,7 +118,7 @@
          ComboBoxOperation.Items.AddRange(new object[] { "сумма", "произведение", "среднее арифметическое" });
          ComboBoxOperation.Location = new System.Drawing.Point(139, 71);
          ComboBoxOperation.Name = "ComboBoxOperation";
-         ComboBoxOperation.Size = new System.Drawing.Size(119, 23);
+         ComboBoxOperation.Size = new System.Drawing.Size(167, 23);
          ComboBoxOperation.TabIndex = 10;
          // 
          // MainForm
