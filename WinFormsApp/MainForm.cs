@@ -19,7 +19,7 @@ namespace WinFormsApp
       public MainForm()
       {
          InitializeComponent();
-         ComboBoxOperation.SelectedIndex = 0;
+         //ComboBoxOperation.SelectedIndex = 0;
       }
 
       // Обработчик нажатия кнопки (синхронный, без многопоточности!)
@@ -30,14 +30,23 @@ namespace WinFormsApp
 
          try
          {
+            if (ComboBoxOperation.SelectedIndex != -1)
+            {
+               ComboBoxOperation.SelectedIndex = 0;
+            }
+
             // Собираем запрос
             List<double> numbers = txtNumbers.Text
                .Split(new[] { ' ', ',', ';' }, StringSplitOptions.RemoveEmptyEntries)
-               .Select(s => double.Parse(s.Trim()))
+            .Select(s => double.Parse(s.Trim()))
                .ToList();
+
+
 
             CalculationRequest request = new CalculationRequest
             {
+               
+               
                Operation = ComboBoxOperation.SelectedItem.ToString(),
                Numbers = numbers,
                Parameters = new RequestParameters
