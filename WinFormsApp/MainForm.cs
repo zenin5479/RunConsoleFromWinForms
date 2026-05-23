@@ -25,15 +25,16 @@ namespace WinFormsApp
       // Обработчик нажатия кнопки (синхронный, без многопоточности!)
       private void btnCalculate_Click(object sender, EventArgs e)
       {
+         if (ComboBoxOperation.SelectedIndex != -1)
+         {
+            ComboBoxOperation.SelectedIndex = 0;
+         }
          // Запускаем консоль
          StartConsole();
 
          try
          {
-            if (ComboBoxOperation.SelectedIndex != -1)
-            {
-               ComboBoxOperation.SelectedIndex = 0;
-            }
+
 
             // Собираем запрос
             List<double> numbers = txtNumbers.Text
@@ -45,8 +46,8 @@ namespace WinFormsApp
 
             CalculationRequest request = new CalculationRequest
             {
-               
-               
+
+
                Operation = ComboBoxOperation.SelectedItem.ToString(),
                Numbers = numbers,
                Parameters = new RequestParameters
