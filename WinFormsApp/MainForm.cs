@@ -143,7 +143,5 @@ namespace WinFormsApp
             _consoleProcess.Close();
          }
       }
-
-
    }
 }
