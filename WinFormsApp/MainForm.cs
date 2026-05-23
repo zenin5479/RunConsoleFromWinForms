@@ -26,7 +26,7 @@ namespace WinFormsApp
       private void btnCalculate_Click(object sender, EventArgs e)
       {
          // Запускаем консоль
-         StartConsoleApp();
+         StartConsole();
          
          try
          {
@@ -82,7 +82,7 @@ namespace WinFormsApp
          ClosingConsoleApp();
       }
 
-      private void StartConsoleApp()
+      private void StartConsole()
       {
          ProcessStartInfo startInfo = new ProcessStartInfo
          {
