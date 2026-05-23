@@ -130,7 +130,6 @@
          Name = "MainForm";
          StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          Text = "Калькулятор";
-         Load += MainForm_Load;
          ((System.ComponentModel.ISupportInitialize)nudPrecision).EndInit();
          ResumeLayout(false);
          PerformLayout();
