@@ -22,13 +22,15 @@ namespace WinFormsApp
          //ComboBoxOperation.SelectedIndex = 0;
       }
 
+      private void MainForm_Load(object sender, EventArgs e)
+      {
+         ComboBoxOperation.SelectedIndex = 1;
+      }
+
       // Обработчик нажатия кнопки (синхронный, без многопоточности!)
       private void btnCalculate_Click(object sender, EventArgs e)
       {
-         if (ComboBoxOperation.SelectedIndex != -1)
-         {
-            ComboBoxOperation.SelectedIndex = 0;
-         }
+
          // Запускаем консоль
          StartConsole();
 
@@ -149,5 +151,7 @@ namespace WinFormsApp
             _consoleProcess.Close();
          }
       }
+
+
    }
 }
