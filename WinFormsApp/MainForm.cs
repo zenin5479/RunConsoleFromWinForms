@@ -40,8 +40,6 @@ namespace WinFormsApp
             .Select(s => double.Parse(s.Trim()))
                .ToList();
 
-
-
             CalculationRequest request = new CalculationRequest
             {
 
