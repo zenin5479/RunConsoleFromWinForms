@@ -62,7 +62,7 @@ namespace CalculationConsole
 
                if (response.Success || response.ErrorMessage == null)
                {
-                  if (request.Parameters?.RoundResult == true)
+                  if (request.Parameters.RoundResult)
                   {
                      result = Math.Round(result, request.Parameters.Precision);
                      steps.Add($"Округлили до {request.Parameters.Precision} знаков");
