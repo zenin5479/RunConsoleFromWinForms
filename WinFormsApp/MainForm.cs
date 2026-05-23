@@ -26,6 +26,9 @@ namespace WinFormsApp
       // Обработчик нажатия кнопки (синхронный, без многопоточности!)
       private void btnCalculate_Click(object sender, EventArgs e)
       {
+         // Запускаем консоль при загрузке формы
+         StartConsoleApp();
+         
          try
          {
             // Собираем запрос
@@ -113,8 +116,7 @@ namespace WinFormsApp
 
       private void MainForm_Load(object sender, EventArgs e)
       {
-         // Запускаем консоль при загрузке формы
-         StartConsoleApp();
+         
       }
 
       private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
