@@ -79,7 +79,7 @@ namespace WinFormsApp
          }
 
          // Закрываем консоль
-         ClosingConsoleApp();
+         ClosingConsole();
       }
 
       private void StartConsole()
@@ -116,7 +116,7 @@ namespace WinFormsApp
          // Добавили поле в класс
       }
 
-      private void ClosingConsoleApp()
+      private void ClosingConsole()
       {
          // Закрываем stdin консоли – это сигнал для неё завершиться
          if (_consoleInput != null)
