@@ -78,6 +78,7 @@ namespace WinFormsApp
             lblResult.Text = string.Format(@"Ошибка: {0}", ex.Message);
          }
 
+         // Закрываем консоль
          ClosingConsoleApp();
       }
 
