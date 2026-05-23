@@ -26,7 +26,7 @@ namespace WinFormsApp
          ComboBoxOperation.SelectedIndex = 0;
       }
 
-      // Обработчик нажатия кнопки (синхронный, без многопоточности!)
+      // Обработчик нажатия кнопки (синхронный, без многопоточности)
       private void btnCalculate_Click(object sender, EventArgs e)
       {
 
