@@ -114,11 +114,6 @@ namespace WinFormsApp
          // Добавили поле в класс
       }
 
-      private void MainForm_Load(object sender, EventArgs e)
-      {
-         
-      }
-
       private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
       {
          // Закрываем stdin консоли – это сигнал для неё завершиться
