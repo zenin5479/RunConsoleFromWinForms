@@ -24,7 +24,7 @@ namespace WinFormsApp
 
       private void MainForm_Load(object sender, EventArgs e)
       {
-         ComboBoxOperation.SelectedIndex = 1;
+         ComboBoxOperation.SelectedIndex = 0;
       }
 
       // Обработчик нажатия кнопки (синхронный, без многопоточности!)
