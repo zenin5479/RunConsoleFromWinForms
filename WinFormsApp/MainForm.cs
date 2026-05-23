@@ -19,7 +19,6 @@ namespace WinFormsApp
       public MainForm()
       {
          InitializeComponent();
-         //ComboBoxOperation.SelectedIndex = 0;
       }
 
       private void MainForm_Load(object sender, EventArgs e)
