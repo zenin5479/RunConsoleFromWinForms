@@ -34,8 +34,6 @@ namespace WinFormsApp
 
          try
          {
-
-
             // Собираем запрос
             List<double> numbers = txtNumbers.Text
                .Split(new[] { ' ', ',', ';' }, StringSplitOptions.RemoveEmptyEntries)
