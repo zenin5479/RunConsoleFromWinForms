@@ -27,7 +27,7 @@ namespace WinFormsApp
       {
          // Запускаем консоль
          StartConsole();
-         
+
          try
          {
             // Собираем запрос
