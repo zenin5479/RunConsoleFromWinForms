@@ -29,7 +29,6 @@ namespace WinFormsApp
       // Обработчик нажатия кнопки (синхронный, без многопоточности)
       private void btnCalculate_Click(object sender, EventArgs e)
       {
-
          // Запускаем консоль
          StartConsole();
 
