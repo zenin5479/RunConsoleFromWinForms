@@ -128,7 +128,7 @@ namespace WinFormsApp
          // Ждём завершения консольного процесса (необязательно, но корректно)
          if (_consoleProcess != null && !_consoleProcess.HasExited)
          {
-            // Максимум 3 секунды
+            // Максимум 1 секунда
             _consoleProcess.WaitForExit(1000);
             if (!_consoleProcess.HasExited)
             {
