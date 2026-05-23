@@ -42,8 +42,6 @@ namespace WinFormsApp
 
             CalculationRequest request = new CalculationRequest
             {
-
-
                Operation = ComboBoxOperation.SelectedItem.ToString(),
                Numbers = numbers,
                Parameters = new RequestParameters
