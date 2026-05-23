@@ -20,7 +20,6 @@ namespace WinFormsApp
       {
          InitializeComponent();
          ComboBoxOperation.SelectedIndex = 0;
-         FormClosing += MainForm_FormClosing;
       }
 
       // Обработчик нажатия кнопки (синхронный, без многопоточности!)
@@ -115,31 +114,6 @@ namespace WinFormsApp
       }
 
       private void ClosingConsoleApp()
-      {
-         // Закрываем stdin консоли – это сигнал для неё завершиться
-         if (_consoleInput != null)
-         {
-            // Закрывает поток и даёт консоли прочитать null
-            _consoleInput.Close();
-         }
-
-         // Ждём завершения консольного процесса (необязательно, но корректно)
-         if (_consoleProcess != null && !_consoleProcess.HasExited)
-         {
-            // Максимум 3 секунды
-            _consoleProcess.WaitForExit(3000);
-            if (!_consoleProcess.HasExited)
-            {
-               // На всякий случай
-               _consoleProcess.Kill();
-            }
-
-            _consoleProcess.Close();
-         }
-      }
-
-
-      private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
       {
          // Закрываем stdin консоли – это сигнал для неё завершиться
          if (_consoleInput != null)
